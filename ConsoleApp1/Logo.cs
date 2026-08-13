@@ -9,13 +9,20 @@ namespace ConsoleApp1;
     {
         public void DisplayLogo()
         {
-            Console.WriteLine(@"
-___________.__          .__                .__ 
-\__    ___/|  |__  __ __|  | _____    ____ |__|
-  |    |   |  |  \|  |  \  | \__  \  /    \|  |
-  |    |   |   Y  \  |  /  |__/ __ \|   |  \  |
-  |____|   |___|  /____/|____(____  /___|  /__|
-                \/                \/     \/    ");
+        Console.ForegroundColor = ConsoleColor.Blue;
+        Console.WriteLine("=============================================================");
+        Console.WriteLine("Welcome to CyberSecurity Chatbot");
+        Console.WriteLine("=============================================================");
+
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine(@"
+░██████████                      ░██            
+    ░██                          ░██            
+    ░██     ░███████   ░███████  ░██ ░█████████ 
+    ░██    ░██    ░██ ░██    ░██ ░██      ░███  
+    ░██    ░██    ░██ ░██    ░██ ░██    ░███    
+    ░██    ░██    ░██ ░██    ░██ ░██  ░███      
+    ░██     ░███████   ░███████  ░██ ░█████████ ");
             
         }
     }
