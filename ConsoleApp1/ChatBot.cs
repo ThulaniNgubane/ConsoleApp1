@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
 using System.Diagnostics.Metrics;
 using System.Net.Mail;
 using System.Reflection.Metadata.Ecma335;
@@ -64,21 +63,24 @@ namespace ConsoleApp1
                     {
                         TypeText("Hello " + userName + "!It’s nice to meet you.");
                     }
-                    else if (question.Contains("How are you"))
-                    {
-                        TypeText("I’m great, thank you for asking! I’m always ready to help you stay safe online.");
-                    }
+                
+                    else if (question.Contains("how are you"))
+                {
+                    TypeText("I’m great, thank you for asking! I’m always ready to help you stay safe online.");
+                }
                     else if (question.Contains("purpose"))
                     {
                         TypeText("My purpose is to create awareness about cybersecurity and teach people how to stay safe online.");
                     }
-                    else if (question.Contains("What can I ask") || question.Contains("help"))
+                    else if (question.Contains("help") || question.Contains("what can i ask"))
                     {
-                        Console.WriteLine();
-                        Console.WriteLine(" – password Safety ");
-                        Console.WriteLine(" – Phishing");
-                        Console.WriteLine(" – safe Browsing");
-                        Console.WriteLine(" – General cybersecurity");
+                        TypeText("Here are topics you can ask me about:\n");
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Console.WriteLine("  • Password Safety");
+                        Console.WriteLine("  • Phishing");
+                        Console.WriteLine("  • Safe Browsing");
+                        Console.WriteLine("  • General Cybersecurity");
+                        Console.ResetColor();
                     }
                     else if (question.Contains("password"))
                     {
@@ -88,7 +90,7 @@ namespace ConsoleApp1
                     }
                     else if (question.Contains("phishing"))
                     {
-                        TypeText("phishing is when criminals try to trick you into giving them personal information through fake emails, message or website.");
+                        TypeText("Phishing is when criminals try to trick you into giving them personal information through fake emails, messages, or websites.");
                     }
                     else if (question.Contains("safe browsing") || question.Contains("browsing"))
                     {
@@ -103,7 +105,8 @@ namespace ConsoleApp1
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("Enter 1 to ask another question or 0 to exit: ");
                     Console.ResetColor();
-                    response = Convert.ToInt32(Console.ReadLine());
+
+
                 }
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine();
