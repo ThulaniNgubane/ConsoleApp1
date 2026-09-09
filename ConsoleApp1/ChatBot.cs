@@ -1,12 +1,4 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System.Diagnostics.Metrics;
-using System.Net.Mail;
-using System.Reflection.Metadata.Ecma335;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Net.WebRequestMethods;
-
+﻿
 namespace ConsoleApp1
 {
     internal class ChatBot
@@ -59,7 +51,7 @@ namespace ConsoleApp1
                     Console.ForegroundColor = ConsoleColor.Magenta;
                     Console.Write("Bot: ");
                     Console.ResetColor();
-                    if (question.Contains("hello") || question.Contains("hi"))
+                    if (question.Contains("hello") || question.Contains("hey"))
                     {
                         TypeText("Hello " + userName + "!It’s nice to meet you.");
                     }
